@@ -1,0 +1,126 @@
+{% extends 'include/homepage.html' %}
+{%load static%}
+{%block content%}
+
+<body class="archive body_style_wide article_style_stretch top_panel_style_dark top_panel_opacity_solid top_panel_below menu_right sidebar_hide bg_image_7 bg_color_1">
+	<div class="body_wrap">
+		<div class="page_wrap">
+			<div class="top_panel_fixed_wrap"> </div>
+			{% include 'include/header.html' %}
+			<div class="page_top_wrap page_top_title page_top_breadcrumbs">
+				<div class="content_wrap">
+					<div class="breadcrumbs">
+						<a class="breadcrumbs_item home" href="index.html">Главная</a>
+						<span class="breadcrumbs_delimiter"></span>
+						<span class="breadcrumbs_item current">{{ contact_id.title_page }}</span> 
+					</div>
+					<h1 class="page_title">{{ contact_id.title_page }}</h1>
+				</div>
+			</div>
+			<div class="page_content_wrap wrap_custom">
+					<section class="content_wrap">
+						<div class="container">
+							<div class="row">
+								<article class="post_item post_item_single page">
+									<section class="post_content">
+										<div class="wpb_wrapper">
+											<div class="sc_section">
+												<div class="sc_content content_wrap">
+													<div class="columns_wrap sc_columns aligncenter">
+														{% for obj in obj_all %}
+														<div class="column-1_3 sc_column_item">
+															<span class="sc_icon style_2 icon-geolocalizator link_color"></span>
+															<div class="sc_section margin_top_mini">
+																<p>{{ obj.title }}<br/>{{ obj.description|safe }}</p>
+															</div>
+														</div>
+														{% endfor %}
+													</div>
+												</div>
+											</div>
+										</div>
+									</section>
+								</article>
+							</div>
+						</div>
+					</section>
+					<section class="bg_image_10">
+						<div class="container">
+							<div class="row">
+								<div class="sc_section bg_tint_light  aligncenter">
+									<div class="sc_section_content">
+										<div class="sc_content content_wrap">
+											<div class="sc_contact_form sc_contact_form_standard aligncenter contact_form_full_boxed">
+												<h2 class="sc_contact_form_title">{{ contact_id.title_contact }}</h2>
+												<p class="sc_contact_form_description">{{ contact_id.description_contact|safe }}</p>
+												<div class="sc_contact_form sc_contact_form_standard alignleft contact_form_1">
+												    <form class="contact_1" id="contactForm" method="post" action="{% url 'contact' %}">
+													{% csrf_token %}
+														<div class="sc_contact_form_info">
+															<div class="sc_contact_form_item sc_contact_form_field label_over">
+															<input type="text" name="name" id="contact_form_username" placeholder="Имя *" required>
+															</div>
+															<div class="sc_contact_form_item sc_contact_form_field label_over">
+															<input type="text"  name="email" id="contact_form_email" placeholder="Email или телефон *" required>
+															</div>
+														</div>
+														<div class="message sc_contact_form_item sc_contact_form_message label_over">
+															<textarea id="contact_form_message" class="textAreaSize" name="message" placeholder="Заказ *" required></textarea>
+														</div>
+														<div class="sc_contact_form_item sc_contact_form_button">
+															<div class="squareButton sc_button_size sc_button_style_global global">
+															<button type="submit" name="contact_submit" class="contact_form_submit">CONTACT US</button>
+															</div>
+														</div>
+														<div class="result sc_infobox" aria-live="polite"></div>
+													</form>
+													<script>
+														function getCookie(name){
+															const m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+															return m ? m.pop() : '';
+														}
+														document.getElementById('contactForm').addEventListener('submit', async (e) => {
+															e.preventDefault();
+															const form = e.currentTarget;
+															const box = form.querySelector('.result.sc_infobox');
+															box.textContent = 'Sending...';
+															try {
+															const resp = await fetch(form.action, {
+																method: 'POST',
+																headers: {
+																'X-Requested-With': 'XMLHttpRequest',
+																'X-CSRFToken': getCookie('csrftoken'),
+																},
+																body: new FormData(form)
+															});
+															const data = await resp.json();
+															box.textContent = data.ok ? 'Спасибо! Сообщение отправлено.' : (data.error || 'Ошибка отправки.');
+															} catch {
+															box.textContent = 'Сбой сети. Попробуйте позже.';
+															}
+														});
+														</script>
+												</div> 
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+			</div>  
+			{% include 'include/footer.html' %}
+			<div class="copyright_wrap">
+				<div class="content_wrap">
+					<a href="http://themeforest.net/user/axiomthemes/portfolio">Axiom</a> © 2015 All Rights Reserved.
+					<a href="#">Terms of use</a> and
+					<a href="#">Privacy Policy</a>
+				</div>
+			</div>
+		</div>  
+	</div>  
+	<a href="#" class="scroll_to_top icon-angle-up-1" title="Scroll to top"> </a>
+	<div class="preloader">
+	    <div class="preloader_image"></div>
+	</div>
+{% endblock %}

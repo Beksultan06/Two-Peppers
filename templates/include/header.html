@@ -1,0 +1,69 @@
+{% load static %}
+
+<header class="top_panel_wrap bg_tint_dark bg_header_1">
+				<div class="menu_main_wrap logo_left">
+					<div class="content_wrap clearfix">
+						<div class="logo">
+							<a href="index.html">
+								<img src="{% static 'images/logo.png' %}" class="logo_main" alt="">
+								<img src="{% static 'images/logo_fixed.png' %}" class="logo_fixed" alt="">
+								<span class="logo_slogan">Irish Tavern - pub Theme</span>
+							</a>
+						</div>
+						<a href="#" class="menu_main_responsive_button icon-menu-1">
+						</a>
+						<nav class="menu_main_nav_area">
+							<ul id="menu_main" class="menu_main_nav">
+								<li class="menu-item menu-item-has-children">
+									<a href="{% url 'index' %}">Home</a>
+								</li>
+								<li class="menu-item">
+									<a href="our-brewery.html">Our Brewery</a>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="#">Events</a>
+									<ul class="sub-menu">
+										<li class="menu-item ">
+											<a href="events-list.html">Events List</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a href="reservation.html">Reservation</a>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="#">Gallery</a>
+									<ul class="sub-menu">
+										<li class="menu-item">
+											<a href="gallery-cobbles.html">Cobbles</a>
+										</li>
+										<li class="menu-item">
+											<a href="gallery-grid.html">Grid</a>
+										</li>
+										<li class="menu-item">
+											<a href="gallery-margin-grid.html">Margin Grid</a>
+										</li>
+										<li class="menu-item">
+											<a href="gallery-masonry.html">Masonry</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children">
+									<a href="blog-streampage.html">Blog</a>
+									<ul class="sub-menu">
+										<li class="menu-item">
+											<a href="blog-with-sidebar.html">With Sidebar</a>
+										</li>
+										<li class="menu-item">
+											<a href="blog-without-sidebar.html">Without sidebar</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item current-menu-ancestor">
+									<a href="{% url 'contact' %}">Contacts</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</header>
