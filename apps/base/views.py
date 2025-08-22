@@ -3,7 +3,8 @@ from django.http import JsonResponse
 from django.contrib import messages
 from .forms import ContactForm
 from .utils import send_telegram_message
-from apps.base.models import ContactSettings, ContactMessage, ContactPage, Events, EventsOBJ, About, Sheff, Testimonials
+from apps.base.models import ContactSettings, ContactMessage, ContactPage, Events, EventsOBJ, \
+About, Sheff, Testimonials, Reservation, ReservationSettings
 
 def events(request):
     events_id = Events.objects.latest("id")
@@ -61,3 +62,8 @@ def brewery(request):
     sheff_all = Sheff.objects.all()
     testimonials_all = Testimonials.objects.all()
     return render(request, 'our-brewery.html', locals())
+
+def reservation(request):
+    reservation_all = Reservation.objects.all()
+    reservation_id = ReservationSettings.objects.latest("id")
+    return render(request, "reservation.html", locals())

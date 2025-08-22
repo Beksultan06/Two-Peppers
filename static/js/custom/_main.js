@@ -112,7 +112,7 @@ function glogals_init(){
 	AXIOM_GLOBALS['video_resize_inited']	= false;
 	AXIOM_GLOBALS['top_panel_height']		= 0;
 	if (AXIOM_GLOBALS['theme_font']=='') AXIOM_GLOBALS['theme_font'] = 'Roboto';
-	AXIOM_GLOBALS['link_color'] = '#799515';
+	AXIOM_GLOBALS['link_color'] = '#050505';
 	AXIOM_GLOBALS['menu_color'] = '#c3602e';
 	AXIOM_GLOBALS['user_color'] = '#a48576';
 

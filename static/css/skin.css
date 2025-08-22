@@ -195,12 +195,12 @@ a, button {
 .link_color_bg {	background: #c3602e; }
 .link_color_border {border-color: #c3602e; }
 
-a.link_color:hover {color: #799515; }
+a.link_color:hover {color: #050505; }
 
-.link_dark {		color: #799515; }
-.link_dark_bgc {	background-color: #799515; }
-.link_dark_bg {		background: #799515; }
-.link_dark_border {	border-color: #799515; }
+.link_dark {		color: #050505; }
+.link_dark_bgc {	background-color: #050505; }
+.link_dark_bg {		background: #050505; }
+.link_dark_border {	border-color: #050505; }
 
 .link_light {		color: #ffffff; }
 .link_light_bgc {	background-color: #ffffff; }
@@ -208,17 +208,17 @@ a.link_color:hover {color: #799515; }
 .link_light_border {border-color: #ffffff; }
 
 /* Main menu colors - use it as background and border with next classes */
-.menu_color {		color: #799515; }
-.menu_color_bgc {	background-color: #799515; }
-.menu_color_bg {	background: #799515; }
-.menu_color_border {border-color: #799515; }
+.menu_color {		color: #050505; }
+.menu_color_bgc {	background-color: #050505; }
+.menu_color_bg {	background: #050505; }
+.menu_color_border {border-color: #050505; }
 
-a.menu_color:hover {color: #5d7602; }
+a.menu_color:hover {color: #050505; }
 
-.menu_dark {		color: #5d7602; }
-.menu_dark_bgc {	background-color: #5d7602; }
-.menu_dark_bg {		background: #5d7602; }
-.menu_dark_border {	border-color: #5d7602; }
+.menu_dark {		color: #050505; }
+.menu_dark_bgc {	background-color: #050505; }
+.menu_dark_bg {		background: #050505; }
+.menu_dark_border {	border-color: #050505; }
 
 .menu_light {		color: #ffffff; }
 .menu_light_bgc {	background-color: #ffffff; }
@@ -307,14 +307,14 @@ a:hover .sc_icon.sc_icon_bg_link,
 .widget_area ul li a:hover,
 .woocommerce ul.products li.product h3 a:hover, .woocommerce-page ul.products li.product h3 a:hover,
 a {
-	color: #799515;
+	color: #050505;
 }
 
 .days_container_all .booking_day_slots,
 #booking_slot_form > div > a:hover,
 .top_panel_style_light .content .search_wrap.search_style_regular .search_form_wrap .search_submit:hover,
 .top_panel_style_light .content .search_wrap.search_style_regular .search_icon:hover {
-	color:#799515 !important;
+	color:#050505 !important;
 }
 
 .sc_accordion.sc_accordion_style_2 .sc_accordion_item .sc_accordion_title .sc_accordion_icon,
@@ -370,10 +370,10 @@ a {
 .pagination_pages > a:hover,
 .tavern-menu li > h3,
 .woocommerce nav.woocommerce-pagination ul li span.current {
-	background-color: #799515;
+	background-color: #050505;
 }
 .custom_options.co_light #co_toggle {
-	background-color: #799515 !important;
+	background-color: #050505 !important;
 }
 .post_content.ih-item.circle.effect1.colored .info,
 .post_content.ih-item.circle.effect2.colored .info,
@@ -412,10 +412,10 @@ a {
 .post_content.ih-item.square.effect15.colored .info,
 .post_content.ih-item.circle.effect20.colored .info .info-back,
 .post_content.ih-item.square.effect_book.colored .info {
-	background: #799515;
+	background: #050505;
 }
 
-.booking_day_container.booking_day_white:hover a { background: #799515 !important; }
+.booking_day_container.booking_day_white:hover a { background: #050505 !important; }
 
 .sc_chat_inner,
 .pagination > a,
@@ -434,36 +434,36 @@ a {
 .sc_testimonials .sc_slider_controls_wrap a:hover,
 .sc_toggles.sc_toggles_style_1 .sc_toggles_item .sc_toggles_title:hover,
 .sc_toggles.sc_toggles_style_2 .sc_toggles_item .sc_toggles_title .sc_toggles_icon {
-	border-color: #799515;
+	border-color: #050505;
 }
 
 .sc_chat:after {
-	border-left-color: #799515;
+	border-left-color: #050505;
 }
 .post_content.ih-item.circle.effect1 .spinner {
-	border-right-color: #799515;
+	border-right-color: #050505;
 }
 
 .comments_list_wrap ul.children,
 .comments_list_wrap ul > li + li {
-	border-top-color: #799515;
+	border-top-color: #050505;
 }
 .tavern-menu li > h3:after,
 .post_content.ih-item.circle.effect1 .spinner,
 .sc_chat:after,
 .comments_list_wrap .comment-respond {
-	border-bottom-color: #799515;
+	border-bottom-color: #050505;
 }
 
 .sc_socials a.icons span[class^="icon-"]:after {
-	-webkit-box-shadow: 0 0 0 2px #799515 inset;
-	box-shadow: 0 0 0 2px #799515 inset;
+	-webkit-box-shadow: 0 0 0 2px #050505 inset;
+	box-shadow: 0 0 0 2px #050505 inset;
 }
 
 
 .sc_socials a.icons span[class^="icon-"]:hover:after {
-	-webkit-box-shadow: 0 0 0 80px #799515 inset;
-	box-shadow: 0 0 0 80px #799515 inset;
+	-webkit-box-shadow: 0 0 0 80px #050505 inset;
+	box-shadow: 0 0 0 80px #050505 inset;
 }
 
 .sc_team.sc_team_style_2 .sc_team_item_avatar .sc_team_item_hover,
@@ -481,16 +481,16 @@ figure figcaption,
 .post_content.ih-item.square.effect13.colored .info,
 .post_content.ih-item.square.effect_dir.colored .info,
 .post_content.ih-item.square.effect_shift.colored .info {
-	background: rgba(121,149,21,0.6);
+	background: rgba(10, 10, 10, 0.6);
 }
 
 .post_content.ih-item.circle.effect17.colored:hover .img:before {
-	box-shadow: inset 0 0 0 110px rgba(121,149,21, 0.6), inset 0 0 0 16px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 0 0 110px rgba(5, 5, 5, 0.6), inset 0 0 0 16px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .eg-tavern-skin-container,
 .sc_slider_swiper .sc_slider_info {
-	background-color: rgba(121,149,21, 0.8) !important;
+	background-color: rgba(15, 15, 15, 0.8) !important;
 }
 /* color 1 dark*/
 .sc_icon.sc_icon_bg_menu:hover,
@@ -501,11 +501,11 @@ a:hover .sc_icon.sc_icon_bg_menu,
 .bg_tint_light .menu_main_responsive_button:hover,
 .top_panel_style_light .menu_main_wrap .logo a,
 .top_panel_style_light .menu_main_wrap .menu_main_nav > li > a {
-	color: #5d7602;
+	color: #050505;
 }
 
 .search_wrap.search_style_regular .search_icon:hover {
-	color:#5d7602 !important;
+	color:#050505 !important;
 }
 
 .widget_area .widget_product_tag_cloud a:hover,
@@ -516,7 +516,7 @@ a:hover .sc_icon.sc_icon_bg_menu,
 .pagination_slider .pager_cur:focus,
 .pagination_pages > .active,
 .pagination_pages > a:hover {
-	border-color:#5d7602;
+	border-color:#050505;
 }
 
 .sc_slider_controls_wrap a:hover,
@@ -529,7 +529,7 @@ a:hover .sc_icon.sc_icon_bg_menu,
 .menu_main_wrap .menu_main_nav > li.current-menu-ancestor,
 .menu_main_wrap .menu_main_nav > li ul,
 .top_panel_fixed.top_panel_over.top_panel_opacity_transparent .top_panel_wrap {
-	background-color: #5d7602;
+	background-color: #050505;
 }
 
 .top_panel_over.top_panel_opacity_transparent .menu_main_wrap .content_wrap:after,
@@ -659,7 +659,7 @@ input[type="submit"], input[type="button"], button, .sc_button, .sc_button.sc_bu
 	background-color: #c3602e;
 }
 
-.sc_infobox_style_regular.style_2 {background-color:#5d7602;}
+.sc_infobox_style_regular.style_2 {background-color:#050505;}
 
 .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle {
 	background: #c3602e;
@@ -1374,7 +1374,7 @@ footer .search_wrap > a {display: none !important;}
 }
 
 .mainslider_1 .tp-loader.spinner3 div{
-	background-color:#7f9a1f!important;
+	background-color:#080808!important;
 }
 
 .mainslider_1 {overflow: hidden;}
@@ -2763,7 +2763,7 @@ a.eg-henryharrison-element-2{
 .eg-tavern-skin-element-1:hover{
 	font-size:16px!important;
 	line-height:22px!important;
-	color:#799515!important;
+	color:#050505!important;
 	font-weight:400!important;
 	border-radius:60px 60px 60px 60px!important;
 	background-color:rgba(255, 255, 255, 1.00)!important;
@@ -2942,7 +2942,7 @@ button:hover,
 	border-width: 2px;
 	border-style: solid;
 }
-.custom_button {background-color:#799515;}
+.custom_button {background-color:#050505;}
 .custom_button .sc_button {margin-top:0;margin-bottom:0;color:#e05100;background-color:#ffffff;border-color:#ffffff;}
 
 /* Blogger */

@@ -153,3 +153,33 @@ class Testimonials(models.Model):
     class Meta:
         verbose_name = 'Отзывы'
         verbose_name_plural = 'Отзывы'
+
+class Reservation(models.Model):
+    image = models.ImageField(
+        upload_to='reservation',
+        verbose_name='Фото Расположение'
+    )
+    image2 = models.ImageField(
+        upload_to='reservation',
+        verbose_name='Фото Расположение 2'
+    )
+
+    class Meta:
+        verbose_name = 'Расположение Заведение'
+        verbose_name_plural = 'Расположение Заведение'
+
+class ReservationSettings(models.Model):
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка'
+    )
+    description = RichTextField(
+        verbose_name='Описание'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Настройка Страницы Заведение'
+        verbose_name_plural = 'Настройка Страницы Заведение'    

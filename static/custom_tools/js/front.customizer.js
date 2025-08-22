@@ -34,7 +34,7 @@ custom_options  +=				'</div>';
 custom_options  +=				'<div class="co_section">';
 custom_options  +=					'<div class="co_label">Color settings</div>';
 custom_options  +=					'<div class="co_colorpic_list">';
-custom_options  +=						'<div class="iColorPicker" data-options="link_color" data-value="#799515"><span>Color 1</span></div>';
+custom_options  +=						'<div class="iColorPicker" data-options="link_color" data-value="#050505"><span>Color 1</span></div>';
 custom_options  +=						'<div class="iColorPicker" data-options="menu_color" data-value="#c3602e"><span>Color 2</span></div>';
 custom_options  +=						'<div class="iColorPicker" data-options="user_color" data-value="#a48576"><span>Color 3</span></div>';
 custom_options  +=					'</div>';
