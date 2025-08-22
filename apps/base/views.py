@@ -3,7 +3,12 @@ from django.http import JsonResponse
 from django.contrib import messages
 from .forms import ContactForm
 from .utils import send_telegram_message
-from apps.base.models import ContactSettings, ContactMessage, ContactPage
+from apps.base.models import ContactSettings, ContactMessage, ContactPage, Events, EventsOBJ, About, Sheff, Testimonials
+
+def events(request):
+    events_id = Events.objects.latest("id")
+    events_all = EventsOBJ.objects.all()
+    return render(request, "events-list.html", locals())
 
 def index(request):
     return render (request, 'index2.html')
@@ -50,3 +55,9 @@ def contact(request):
     else:
         form = ContactForm()
     return render(request, "contact-us.html", locals())
+
+def brewery(request):
+    about_id = About.objects.latest("id")
+    sheff_all = Sheff.objects.all()
+    testimonials_all = Testimonials.objects.all()
+    return render(request, 'our-brewery.html', locals())

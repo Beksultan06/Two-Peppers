@@ -1,5 +1,5 @@
 from django.contrib import admin
-from apps.base.models import ContactSettings, Pages, Images, ContactMessage, ContactPage
+from apps.base.models import ContactSettings, Pages, Images, ContactMessage, ContactPage, Events, EventsOBJ, About, Sheff, Testimonials
 
 class ImagesInline(admin.TabularInline):
     model = Images
@@ -11,6 +11,11 @@ class PagesAdmin(admin.ModelAdmin):
 
 admin.site.register(ContactSettings)
 admin.site.register(ContactPage)
+admin.site.register(Events)
+admin.site.register(EventsOBJ)
+admin.site.register(About)
+admin.site.register(Sheff)
+admin.site.register(Testimonials)
 
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):

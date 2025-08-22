@@ -1,7 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
-# Create your models here.
 class Pages(models.Model):
     images = models.ImageField(upload_to='imagebanner', verbose_name = "фотки на главной старнице")
     
@@ -54,3 +53,103 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"{self.name} <{self.email}> @ {self.created_at:%Y-%m-%d %H:%M}"
+
+class Events(models.Model):
+    title = models.CharField(max_length=150, verbose_name='Заголовка')
+    title_events = models.CharField(max_length=150, verbose_name='Заголовка Событий')
+    
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Настройка Страницы Событий'
+        verbose_name_plural = 'Настройка Страницы Событий'    
+
+class EventsOBJ(models.Model):
+    year = models.CharField(max_length=155, verbose_name='Дата')
+    title = models.CharField(max_length=155, verbose_name='Заголовка Событий')
+    data = models.CharField(max_length=255,verbose_name='Место Проведение')
+    url_events = models.URLField(verbose_name='Ссылкана карта', help_text='Вставьте ссылку google карту')
+    image = models.ImageField(upload_to='events', verbose_name='Фото событий')
+    description = RichTextField(verbose_name='Описание Событий')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Список Событий'
+        verbose_name_plural = 'Список Событий'    
+
+
+class About(models.Model):
+    title_pages = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка Страницы'
+    )
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка О нас'
+    )
+    description = RichTextField(
+        verbose_name='Описание О нас'
+    )
+    image = models.ImageField(
+        upload_to='about',
+        verbose_name='Фото'
+    )
+    title_sheff = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка Поваров'
+    ) 
+    description_sheff = RichTextField(
+        verbose_name='Описание Поваров'
+    )
+    title_testimonials = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка Отзывов'
+    )
+
+    def __str__(self):
+        return self.title_pages
+
+    class Meta:
+        verbose_name = 'Настройки Страницы О Нас'
+        verbose_name_plural = 'Настройки Страницы О Нас'
+
+class Sheff(models.Model):
+    name = models.CharField(
+        max_length=155,
+        verbose_name='Имя'
+    )
+    job_type = models.CharField(
+        max_length=155,
+        verbose_name='Должность'
+    )
+    image = models.ImageField(
+        upload_to='Sheff',
+        verbose_name='Фото Повара'
+    )
+
+    def __str__(self):
+        return self.name 
+
+
+    class Meta:
+        verbose_name = 'Наши Повара'
+        verbose_name_plural = 'Наши Повара' 
+
+class Testimonials(models.Model):
+    name = models.CharField(
+        max_length=155,
+        verbose_name='Имя'
+    )
+    text = models.TextField(
+        verbose_name='Текст'
+    )
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name = 'Отзывы'
+        verbose_name_plural = 'Отзывы'
