@@ -5,7 +5,7 @@ from .forms import ContactForm
 from .utils import send_telegram_message
 from apps.base.models import ContactSettings, ContactMessage, ContactPage, Events, EventsOBJ, \
 About, Sheff, Testimonials, Reservation, ReservationSettings
-
+    
 def events(request):
     events_id = Events.objects.latest("id")
     events_all = EventsOBJ.objects.all()
