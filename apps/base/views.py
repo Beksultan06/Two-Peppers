@@ -4,7 +4,8 @@ from django.contrib import messages
 from .forms import ContactForm
 from .utils import send_telegram_message
 from apps.base.models import ContactSettings, ContactMessage, ContactPage, Events, EventsOBJ, \
-About, Sheff, Testimonials, Reservation, ReservationSettings
+About, Sheff, Testimonials, Reservation, ReservationSettings, SettingsMainPages, \
+ImageBanner, MenuCategory, Gallery
     
 def events(request):
     events_id = Events.objects.latest("id")
@@ -12,7 +13,25 @@ def events(request):
     return render(request, "events-list.html", locals())
 
 def index(request):
-    return render (request, 'index2.html')
+    settings_id = SettingsMainPages.objects.latest("id")
+    image_all  = ImageBanner.objects.all()
+    categories = MenuCategory.objects.prefetch_related('items').all()
+    testimonials = Testimonials.objects.all()
+    about_id = About.objects.latest("id")
+    gallery_all = Gallery.objects.all()
+
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        message = request.POST.get("message")
+
+        Testimonials.objects.create(
+            name=name,
+            email=email,
+            text=message
+        )
+        return redirect('index')  
+    return  render (request, 'index2.html', locals())
     
 def contact(request):
     obj_all = ContactSettings.objects.all()

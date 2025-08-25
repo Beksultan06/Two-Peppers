@@ -146,6 +146,11 @@ class Testimonials(models.Model):
     text = models.TextField(
         verbose_name='Текст'
     )
+    email = models.EmailField(
+        verbose_name='Email',
+        blank=True,
+        null=True
+    )
 
     def __str__(self):
         return self.name
@@ -183,3 +188,114 @@ class ReservationSettings(models.Model):
     class Meta:
         verbose_name = 'Настройка Страницы Заведение'
         verbose_name_plural = 'Настройка Страницы Заведение'    
+
+
+class SettingsMainPages(models.Model):
+    logo = models.ImageField(
+        upload_to = 'Логотип Сайта'
+    )
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка'
+    ) 
+    subtitle = models.CharField(
+        max_length=155,
+        verbose_name='подзаголовок'
+    ) 
+    image_about = models.ImageField(
+        max_length=155,
+        verbose_name='фото о нас'
+    )
+    title_about = models.CharField(
+        max_length=155,
+        verbose_name='Заголовка о нас'
+    ) 
+    description = RichTextField(
+        verbose_name = 'Описание'
+    )
+    menu = models.CharField(
+        max_length=155,
+        verbose_name='Заголовок Меню'
+    )
+    title_images = models.CharField(
+        max_length=155,
+        verbose_name='Заголвок Галлерий'
+    )
+    description_images = RichTextField(
+        verbose_name='Описание Галлерий'
+    )
+    title_contact = models.CharField(
+        max_length=155,
+        verbose_name='Заголвок Контактов'
+    )
+    image_contact = models.ImageField(
+        upload_to='image',
+        verbose_name='Фото контакта'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Настройки Главной Страницы'
+        verbose_name_plural = 'Настройки Главной Страницы'
+
+
+class ImageBanner(models.Model):
+    image1 = models.ImageField(
+        upload_to='image',verbose_name='Фото 1'
+    )
+    image2 = models.ImageField(
+        upload_to='image',verbose_name='Фото 2'
+    )
+    image3 = models.ImageField(
+        upload_to='image',verbose_name='Фото 3'
+    )
+    image4 = models.ImageField(
+        upload_to='image',verbose_name='Фото 4'
+    )
+    image5 = models.ImageField(
+        upload_to='image',verbose_name='Фото 5'
+    )
+    image6 = models.ImageField(
+        upload_to='image',verbose_name='Фото 6'
+    )
+
+    class Meta:
+        verbose_name = 'Фотография в главной страницы'
+        verbose_name_plural = 'Фотография в главной страницы'
+
+class MenuCategory(models.Model):
+    name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Категорий'
+        verbose_name_plural = 'Категорий'
+
+class MenuItem(models.Model):
+    category = models.ForeignKey(MenuCategory, on_delete=models.CASCADE, related_name='items')
+    name = models.CharField(max_length=100)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    description = models.TextField()
+    image = models.ImageField(upload_to='menu_images/')
+
+    def __str__(self):
+        return f"{self.name} (${self.price})"
+
+
+    class Meta:
+        verbose_name = 'Меню '
+        verbose_name_plural = 'Меню '
+
+class Gallery(models.Model):
+    image = models.ImageField(
+        upload_to='gallery',
+        verbose_name='Фото'
+    )
+
+    class Meta:
+        verbose_name = 'Галлерий'
+        verbose_name_plural = 'Галлерия' 

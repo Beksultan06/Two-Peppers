@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -19,122 +18,66 @@
 	<link rel='stylesheet' href="{% static 'css/skin.css' %}" type='text/css' media='all'/>
 	<link rel='stylesheet' href="{% static 'css/responsive.css' %}" type='text/css' media='all'/>
 	<link rel='stylesheet' href="{% static 'js/custom/core.messages/core.messages.css' %}" type='text/css' media='all'/>
-	
 	<link rel='stylesheet' href="{% static 'custom_tools/css/front.customizer.css' %}" type='text/css' media='all'/>
-
 </head>
-
 <body class="home page body_style_wide article_style_stretch top_panel_style_dark top_panel_opacity_solid top_panel_below menu_right sidebar_hide bg_image_7 bg_color_1">
 	<div class="body_wrap">
 		<div class="page_wrap">
-
 			<section id="mainslider_1" class="slider_wrap slider_fullwide slider_engine_revo slider_alias_slider-home mainslider_1">
 				<div id="rev_slider_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
 					<div id="rev_slider_1" class="rev_slider fullwidthabanner">
 						<ul>
+							{% for image in image_all %}
 							<li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
-								<img src="images/slider-1-bg.jpg" alt="slider-1-bg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+								<img src="{{ image.image1.url }}" style="width:250px; height:250px; object-fit:cover;" alt="slider-1-bg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 								<div class="tp-caption sfb  slider-1-slide-1-bottom rs-parallaxlevel-0" data-x="center" data-hoffset="0" data-y="bottom" data-voffset="78" data-speed="1200" data-start="450" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-1-bottom.png" alt="">
+									<img src="{{ image.image2.url }}" alt="" style="width:250px; height:250px; object-fit:cover;">
 								</div>
 								<div class="tp-caption sft  slider-1-slide-1-top rs-parallaxlevel-0" data-x="center" data-hoffset="-38" data-y="36" data-speed="800" data-start="250" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-1-top.png" alt="">
+									<img src="{{ image.image3.url }}" alt="" style="width:250px; height:250px; object-fit:cover;">
 								</div>
 								<div class="tp-caption sfl  slider-1-slide-1-left rs-parallaxlevel-0" data-x="-115" data-y="center" data-voffset="148" data-speed="1100" data-start="400" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-1-left.png" alt="">
+									<img src="{{ image.image4.url }}" alt="" style="width:250px; height:250px; object-fit:cover;">
 								</div>
 								<div class="tp-caption sfr  slider-1-slide-1-right rs-parallaxlevel-0" data-x="right" data-hoffset="-10" data-y="center" data-voffset="120" data-speed="1100" data-start="550" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-1-right.png" alt="">
+									<img src="{{ image.image5.url }}" alt="" style="width:250px; height:250px; object-fit:cover;">
 								</div>
 								<div class="tp-caption sft  slider-1-slide-1-top-left rs-parallaxlevel-0" data-x="-14" data-y="-4" data-speed="800" data-start="250" data-easing="Power3.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-1-top-left.png" alt="">
+									<img src="{{ image.image6.url }}" alt="" style="width:250px; height:250px; object-fit:cover;">
 								</div>
 							</li>
-							<li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
-								<img src="images/slider-1-bg.jpg" alt="slider-1-bg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-								<div class="tp-caption sfb  slider-1-slide-1-bottom rs-parallaxlevel-0" data-x="center" data-hoffset="132" data-y="bottom" data-voffset="80" data-speed="1200" data-start="250" data-easing="Power2.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-2-bottom.png" alt="">
-								</div>
-								<div class="tp-caption sft  slider-1-slide-1-top rs-parallaxlevel-0" data-x="center" data-hoffset="24" data-y="-80" data-speed="800" data-start="450" data-easing="Power2.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-2-top.png" alt="">
-								</div>
-								<div class="tp-caption sfl  slider-1-slide-1-left rs-parallaxlevel-0" data-x="-48" data-y="center" data-voffset="103" data-speed="1100" data-start="550" data-easing="Power2.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-2-left.png" alt="">
-								</div>
-								<div class="tp-caption sfr  slider-1-slide-1-right rs-parallaxlevel-0" data-x="right" data-hoffset="313" data-y="-22" data-speed="1100" data-start="400" data-easing="Power2.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-2-right.png" alt="">
-								</div>
-								<div class="tp-caption sfl  slider-1-slide-1-left-top rs-parallaxlevel-0" data-x="-29" data-y="44" data-speed="1100" data-start="550" data-easing="Power2.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-2-left-top.png" alt="">
-								</div>
-							</li>
-							<li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
-								<img src="images/slider-1-bg.jpg" alt="slider-1-bg" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-								<div class="tp-caption sfb  slider-1-slide-1-bottom rs-parallaxlevel-0" data-x="center" data-hoffset="115" data-y="bottom" data-voffset="119" data-speed="1200" data-start="400" data-easing="Power4.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-3-bottom.png" alt="">
-								</div>
-								<div class="tp-caption sft  slider-1-slide-1-top rs-parallaxlevel-0" data-x="center" data-hoffset="76" data-y="-63" data-speed="800" data-start="550" data-easing="Power4.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-3-top.png" alt="">
-								</div>
-								<div class="tp-caption sfl  slider-1-slide-1-left rs-parallaxlevel-0" data-x="-219" data-y="center" data-voffset="-28" data-speed="1100" data-start="450" data-easing="Power4.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-3-left.png" alt="">
-								</div>
-								<div class="tp-caption sfr  slider-1-slide-1-right rs-parallaxlevel-0" data-x="right" data-hoffset="71" data-y="center" data-voffset="-32" data-speed="1100" data-start="250" data-easing="Power4.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-3-right.png" alt="">
-								</div>
-								<div class="tp-caption sfl  slider-1-slide-1-left-bottom rs-parallaxlevel-0" data-x="-224" data-y="552" data-speed="1100" data-start="550" data-easing="Power4.easeInOut" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-									<img src="images/slider-1-slide-3-left-bottom.png" alt="">
-								</div>
-							</li>
+							{% endfor %}
 						</ul>
 						<div class="tp-static-layers">
 							<div class="tp-caption tp-fade  slider-1-logo rs-parallaxlevel-0 tp-static-layer" data-x="center" data-hoffset="0" data-y="center" data-voffset="-60" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-startslide="0" data-endslide="2" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-								<img src="images/slider-1-logo.png" alt="">
-							</div>
-							<div class="tp-caption no_style tp-fade tp-resizeme  slider-1-static-btn rs-parallaxlevel-0 tp-static-layer" data-x="center" data-hoffset="0" data-y="center" data-voffset="210" data-speed="300" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-startslide="0" data-endslide="2" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300">
-								<a href="#">
-									<img src="images/slider-1-button.png" alt=""/>
-								</a>
+								<img src="{{ settings_id.logo.url }}" alt="">
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			<div class="top_panel_fixed_wrap"> </div>
 			{% include 'include/header.html' %}
 			<div class="page_content_wrap wrap_custom">
-
 					<section class="content_wrap">
 						<div class="container">
 							<div class="row">
 								<div class="sc_section">
 									<div class="sc_content content_wrap">
 										<div class="aligncenter">
-											<h1 class="sc_title styling1">Lucky Charms</h1>
-											<h6 class="sc_undertitle styling1 margin_bottom_middle">100% IRISH OR NOT&#8230;</h6>
+											<h1 class="sc_title styling1">{{ settings_id.title }}</h1>
+											<h6 class="sc_undertitle styling1 margin_bottom_middle">{{ settings_id.subtitle }}</h6>
 										</div>
 										<div class="columns_wrap sc_columns">
 											<div class="column-1_2 sc_column_item">
 												<figure class="sc_image sc_image_shape_square sc_image_styled">
-													<img src="images/home-1-img-1.jpg" alt=""/>
+													<img src="{{ settings_id.image_about.url }}" alt=""/>
 												</figure>
 											</div>
 											<div class="column-1_2 sc_column_item">
 												<div class="sc_section">
-													<h4 class="sc_title margin_bottom_small">READY TO FEEL LUCKY?</h4>
-													<p>The Lucky Pint has gone through a serious evolution starting as a tiny home brewery and ended up being a big chain of pubs. Wanna get the best brewing experience? You&#8217;re in the right place!</p>
-													<p>Over all these long years we have been accumulating only the best brewing traditions and recipes. We keep surprising our customers and ourselves. Turns out &#8211; nothing tastes as good as our beer!</p>
-													<div class="margin_top_small">
-														<a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_custom sc_button_size_small">
-															<span>LEARN MORE</span>
-															<span>LEARN MORE</span>
-														</a>
-														<a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_user sc_button_size_small">
-															<span>RESERVE A TABLE</span>
-															<span>RESERVE A TABLE</span>
-														</a>
-													</div>
+													<h4 class="sc_title margin_bottom_small">{{ settings_id.title_about }}</h4>
+													<p>{{ settings_id.description|safe }}</p>
 												</div>
 											</div>
 										</div>
@@ -143,525 +86,67 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="bg_image_11 bg_tint_light">
 						<div class="container">
 							<div class="row">
 								<div class="content_wrap">
-									<h1 class="sc_title sc_title_regular aligncenter styling1">Hot Menu</h1>
+									<h1 class="sc_title sc_title_regular aligncenter styling1">{{ settings_id.menu }}</h1>
 									<div class="sc_tabs sc_tabs_style_2" data-active="0">
 										<ul class="sc_tabs_titles margin_bottom_mini margin_top_mini">
+										{% for category in categories %}
 											<li class="sc_tabs_title">
-												<a href="#sc_tab_1" class="theme_button" id="sc_tab_1_tab">appetizers</a>
+												<a href="#sc_tab_{{ forloop.counter }}" class="theme_button">{{ category.name }}</a>
 											</li>
-											<li class="sc_tabs_title">
-												<a href="#sc_tab_2" class="theme_button" id="sc_tab_2_tab">salads</a>
-											</li>
-											<li class="sc_tabs_title">
-												<a href="#sc_tab_3" class="theme_button" id="sc_tab_3_tab">sandwiches</a>
-											</li>
-											<li class="sc_tabs_title">
-												<a href="#sc_tab_4" class="theme_button" id="sc_tab_4_tab">Beverages</a>
-											</li>
-											<li class="sc_tabs_title last">
-												<a href="#sc_tab_5" class="theme_button" id="sc_tab_5_tab">specials</a>
-											</li>
-										</ul>
-										<div id="sc_tab_1" class="sc_tabs_content">
-											<div class="columns_wrap sc_columns">
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-1.jpg" alt="menu image">
-															<p>
-																<span>POTATO PIEROGIES</span>
-																<span>$7.95</span>
-															</p>
-															<p>Sautéed dumplings served with chive sour cream and sweet potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-2.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-3.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-4.jpg" alt="menu image">
-															<p>
-																<span>GEDADSCHDE</span>
-																<span>$5.95</span>
-															</p>
-															<p>Potato croquette with goat cheese, green onion, fried leeks, maple chipotle glaze</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-5.jpg" alt="menu image">
-															<p>
-																<span>BACON WRAPPED SHRIMP</span>
-																<span>$7.25</span>
-															</p>
-															<p>Barbecue sauce glaze, cheese polenta</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-6.jpg" alt="menu image">
-															<p>
-																<span>CAJUN CRUSTED CHICKEN SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Mixed greens, citrus segments, fresh mango, red radishes, avocado, French mustard vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-7.jpg" alt="menu image">
-															<p>
-																<span>MINI BRAT AND KNOCKWURST</span>
-																<span>$6.95</span>
-															</p>
-															<p>Two mini sausages with sauerkraut served on soft buns with Düsseldorf mustard and German potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-8.jpg" alt="menu image">
-															<p>
-																<span>STUFFED MUSHROOMS</span>
-																<span>$5.55</span>
-															</p>
-															<p>Oven roasted mushroom caps filled with Berghoffs famous creamed spinach, Parmesan cheese</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-9.jpg" alt="menu image">
-															<p>
-																<span>OVEN ROASTED BEET SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Arugula, heirloom tomato, imported brie wedge, garlic crostini, caramelized walnuts tossed in an apple bourbon vinaigrette</p>
-														</li>
-													</ul>
-												</div>
+										{% endfor %}
+									</ul>
+
+									{% for category in categories %}
+									<div id="sc_tab_{{ forloop.counter }}" class="sc_tabs_content">
+										<div class="columns_wrap sc_columns">
+											{% for item in category.items.all %}
+											<div class="column-1_3 sc_column_item">
+												<ul class="tavern-menu">
+													<li class="with_image">
+														<img src="{{ item.image.url }}" alt="{{ item.name }}" style="width:100px; height:100px; object-fit:cover;">
+														<p>
+															<span>{{ item.name }}</span>
+															<span>${{ item.price }}</span>
+														</p>
+														<p>{{ item.description }}</p>
+													</li>
+												</ul>
 											</div>
-										</div>
-										<div id="sc_tab_2" class="sc_tabs_content">
-											<div class="columns_wrap sc_columns">
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-4.jpg" alt="menu image">
-															<p>
-																<span>GEDADSCHDE</span>
-																<span>$5.95</span>
-															</p>
-															<p>Potato croquette with goat cheese, green onion, fried leeks, maple chipotle glaze</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-5.jpg" alt="menu image">
-															<p>
-																<span>BACON WRAPPED SHRIMP</span>
-																<span>$7.25</span>
-															</p>
-															<p>Barbecue sauce glaze, cheese polenta</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-6.jpg" alt="menu image">
-															<p>
-																<span>CAJUN CRUSTED CHICKEN SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Mixed greens, citrus segments, fresh mango, red radishes, avocado, French mustard vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-1.jpg" alt="menu image">
-															<p>
-																<span>POTATO PIEROGIES</span>
-																<span>$7.95</span>
-															</p>
-															<p>Sautéed dumplings served with chive sour cream and sweet potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-2.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-3.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-7.jpg" alt="menu image">
-															<p>
-																<span>MINI BRAT AND KNOCKWURST</span>
-																<span>$6.95</span>
-															</p>
-															<p>Two mini sausages with sauerkraut served on soft buns with Düsseldorf mustard and German potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-8.jpg" alt="menu image">
-															<p>
-																<span>STUFFED MUSHROOMS</span>
-																<span>$5.55</span>
-															</p>
-															<p>Oven roasted mushroom caps filled with Berghoffs famous creamed spinach, Parmesan cheese</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-9.jpg" alt="menu image">
-															<p>
-																<span>OVEN ROASTED BEET SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Arugula, heirloom tomato, imported brie wedge, garlic crostini, caramelized walnuts tossed in an apple bourbon vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div id="sc_tab_3" class="sc_tabs_content">
-											<div class="columns_wrap sc_columns">
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-7.jpg" alt="menu image">
-															<p>
-																<span>MINI BRAT AND KNOCKWURST</span>
-																<span>$6.95</span>
-															</p>
-															<p>Two mini sausages with sauerkraut served on soft buns with Düsseldorf mustard and German potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-8.jpg" alt="menu image">
-															<p>
-																<span>STUFFED MUSHROOMS</span>
-																<span>$5.55</span>
-															</p>
-															<p>Oven roasted mushroom caps filled with Berghoffs famous creamed spinach, Parmesan cheese</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-9.jpg" alt="menu image">
-															<p>
-																<span>OVEN ROASTED BEET SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Arugula, heirloom tomato, imported brie wedge, garlic crostini, caramelized walnuts tossed in an apple bourbon vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-4.jpg" alt="menu image">
-															<p>
-																<span>GEDADSCHDE</span>
-																<span>$5.95</span>
-															</p>
-															<p>Potato croquette with goat cheese, green onion, fried leeks, maple chipotle glaze</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-5.jpg" alt="menu image">
-															<p>
-																<span>BACON WRAPPED SHRIMP</span>
-																<span>$7.25</span>
-															</p>
-															<p>Barbecue sauce glaze, cheese polenta</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-6.jpg" alt="menu image">
-															<p>
-																<span>CAJUN CRUSTED CHICKEN SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Mixed greens, citrus segments, fresh mango, red radishes, avocado, French mustard vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-1.jpg" alt="menu image">
-															<p>
-																<span>POTATO PIEROGIES</span>
-																<span>$7.95</span>
-															</p>
-															<p>Sautéed dumplings served with chive sour cream and sweet potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-2.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-3.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div id="sc_tab_4" class="sc_tabs_content">
-											<div class="columns_wrap sc_columns">
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-7.jpg" alt="menu image">
-															<p>
-																<span>MINI BRAT AND KNOCKWURST</span>
-																<span>$6.95</span>
-															</p>
-															<p>Two mini sausages with sauerkraut served on soft buns with Düsseldorf mustard and German potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-8.jpg" alt="menu image">
-															<p>
-																<span>STUFFED MUSHROOMS</span>
-																<span>$5.55</span>
-															</p>
-															<p>Oven roasted mushroom caps filled with Berghoffs famous creamed spinach, Parmesan cheese</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-9.jpg" alt="menu image">
-															<p>
-																<span>OVEN ROASTED BEET SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Arugula, heirloom tomato, imported brie wedge, garlic crostini, caramelized walnuts tossed in an apple bourbon vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-1.jpg" alt="menu image">
-															<p>
-																<span>POTATO PIEROGIES</span>
-																<span>$7.95</span>
-															</p>
-															<p>Sautéed dumplings served with chive sour cream and sweet potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-2.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-3.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-7.jpg" alt="menu image">
-															<p>
-																<span>MINI BRAT AND KNOCKWURST</span>
-																<span>$6.95</span>
-															</p>
-															<p>Two mini sausages with sauerkraut served on soft buns with Düsseldorf mustard and German potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-8.jpg" alt="menu image">
-															<p>
-																<span>STUFFED MUSHROOMS</span>
-																<span>$5.55</span>
-															</p>
-															<p>Oven roasted mushroom caps filled with Berghoffs famous creamed spinach, Parmesan cheese</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-9.jpg" alt="menu image">
-															<p>
-																<span>OVEN ROASTED BEET SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Arugula, heirloom tomato, imported brie wedge, garlic crostini, caramelized walnuts tossed in an apple bourbon vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div id="sc_tab_5" class="sc_tabs_content">
-											<div class="columns_wrap sc_columns">
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-4.jpg" alt="menu image">
-															<p>
-																<span>GEDADSCHDE</span>
-																<span>$5.95</span>
-															</p>
-															<p>Potato croquette with goat cheese, green onion, fried leeks, maple chipotle glaze</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-5.jpg" alt="menu image">
-															<p>
-																<span>BACON WRAPPED SHRIMP</span>
-																<span>$7.25</span>
-															</p>
-															<p>Barbecue sauce glaze, cheese polenta</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-6.jpg" alt="menu image">
-															<p>
-																<span>CAJUN CRUSTED CHICKEN SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Mixed greens, citrus segments, fresh mango, red radishes, avocado, French mustard vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-7.jpg" alt="menu image">
-															<p>
-																<span>MINI BRAT AND KNOCKWURST</span>
-																<span>$6.95</span>
-															</p>
-															<p>Two mini sausages with sauerkraut served on soft buns with Düsseldorf mustard and German potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-8.jpg" alt="menu image">
-															<p>
-																<span>STUFFED MUSHROOMS</span>
-																<span>$5.55</span>
-															</p>
-															<p>Oven roasted mushroom caps filled with Berghoffs famous creamed spinach, Parmesan cheese</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-9.jpg" alt="menu image">
-															<p>
-																<span>OVEN ROASTED BEET SALAD</span>
-																<span>$7.25</span>
-															</p>
-															<p>Arugula, heirloom tomato, imported brie wedge, garlic crostini, caramelized walnuts tossed in an apple bourbon vinaigrette</p>
-														</li>
-													</ul>
-												</div>
-												<div class="column-1_3 sc_column_item">
-													<ul class="tavern-menu">
-														<li class="with_image">
-															<img src="images/course-1.jpg" alt="menu image">
-															<p>
-																<span>POTATO PIEROGIES</span>
-																<span>$7.95</span>
-															</p>
-															<p>Sautéed dumplings served with chive sour cream and sweet potato salad</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-2.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-														<li class="with_image">
-															<img src="images/course-3.jpg" alt="menu image">
-															<p>
-																<span>SALMON AND ROCK SHRIMP CAKE</span>
-																<span>$7.25</span>
-															</p>
-															<p>Pan seared cakes with a caper dill beurre blanc over a garlic crostini</p>
-														</li>
-													</ul>
-												</div>
-											</div>
+											{% endfor %}
 										</div>
 									</div>
-									<div class="sc_section aligncenter">
-										<a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_bg_menu sc_button_size_small">
-											<span>VIEW FULL MENU</span>
-											<span>VIEW FULL MENU</span>
-										</a>
+									{% endfor %}
 									</div>
 								</div>							
 							</div>
 						</div>
 					</section>
-
 					<section class="bg_tint_dark">
 						<div class="container">
 							<div class="row">
 								<div class="sc_section bg_tint_dark aligncenter">
-									<h1 class="sc_title styling3">Testimonials</h1>
+									<h1 class="sc_title styling3">{{ about_id.title_testimonials }}</h1>
 									<div class="sc_testimonials_wrap sc_section bg_tint_dark">
 										<div id="sc_testimonials_1" class="sc_testimonials sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_height_auto aligncenter" data-interval="7000">
 											<div class="slides swiper-wrapper">
+												{% for testimonials in testimonials %}
 												<div class="swiper-slide">
 													<div class="sc_testimonial_item">
 														<div class="sc_testimonial_content">
-															<p>Best purchase i made in envato. Great Theme!</p>
+															<p>{{ testimonials.name }}</p>
 														</div>
 														<div class="sc_testimonials_item_author">
 															<div class="sc_testimonial_author">
-																<a href="#">Sarah Jefferson</a>
+																<a href="#">{{ testimonials.name }}</a>
 															</div>
 														</div>
 													</div>
 												</div>
-												<div class="swiper-slide">
-													<div class="sc_testimonial_item">
-														<div class="sc_testimonial_content">
-															<p>Thank you for all your help and assistance over the years with our products.<br/>
-															I would have no hesitation in recommending you to my clients.</p>
-														</div>
-														<div class="sc_testimonials_item_author">
-															<div class="sc_testimonial_author">
-																<a href="#">David Anderson</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="swiper-slide">
-													<div class="sc_testimonial_item">
-														<div class="sc_testimonial_content">
-															<p>I love this pub. Lots of different beer anyone can make happy!</p>
-														</div>
-														<div class="sc_testimonials_item_author">
-															<div class="sc_testimonial_author">online Education</div>
-														</div>
-													</div>
-												</div>
+												{% endfor %}
 											</div>
 											<div class="sc_slider_controls_wrap controls_top">
 												<a class="sc_slider_prev" href="#"> </a>
@@ -673,118 +158,38 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="">
 						<div class="container">
 							<div class="row">
 								<div class="sc_section bg_tint_light aligncenter">
 									<div class="sc_content content_wrap">
 										<div class="aligncenter margin_bottom_middle">
-											<h1 class="sc_title styling1 margin_bottom_small">Join Us For A Beer!</h1>
+											<h1 class="sc_title styling1 margin_bottom_small">{{ settings_id.title_images }}</h1>
 											<div class="sc_section">
-												<p>We will help you build strong online business by creating a professional website<br/>
-												which best suits your needs and the needs of your target audience.</p>
+												<p>{{ settings_id.description_images|safe }}</p>
 											</div>
 										</div>
 										<article class="myportfolio-container flat-dark" id="th-2-gallery">
 											<div id="esg-grid-1-1" class="esg-grid esg-grid_style_1">
 												<ul>
+													{% for gallery in gallery_all %}
 													<li class="filterall eg-tavern-skin-wrapper">
 														<div class="esg-media-cover-wrapper">
 															<div class="esg-entry-media">
-																<img src="images/Depositphotos_49811149_original.jpg" alt="">
+																<img src="{{ gallery.image.url }}" alt="">
 															</div>
 															<div class="esg-entry-cover">
 																<div class="esg-overlay esg-zoomback eg-tavern-skin-container" data-delay="0">
 																</div>
 																<div class="esg-center eg-tavern-skin-element-1-a esg-zoomfront" data-delay="0.1">
-																	<a class="eg-tavern-skin-element-1 esgbox" href="images/Depositphotos_49811149_original.jpg">
+																	<a class="eg-tavern-skin-element-1 esgbox" href="{{ gallery.image.url }}">
 																		<i class="eg-icon-search"></i>
 																	</a>
 																</div>
 															</div>
 														</div>
 													</li>
-													<li class="filterall eg-tavern-skin-wrapper">
-														<div class="esg-media-cover-wrapper">
-															<div class="esg-entry-media">
-																<img src="images/Depositphotos_22848496_original.jpg" alt="">
-															</div>
-															<div class="esg-entry-cover">
-																<div class="esg-overlay esg-zoomback eg-tavern-skin-container" data-delay="0">
-																</div>
-																<div class="esg-center eg-tavern-skin-element-1-a esg-zoomfront" data-delay="0.1">
-																	<a class="eg-tavern-skin-element-1 esgbox" href="images/Depositphotos_22848496_original.jpg">
-																		<i class="eg-icon-search"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="filterall eg-tavern-skin-wrapper">
-														<div class="esg-media-cover-wrapper">
-															<div class="esg-entry-media">
-																<img src="images/Depositphotos_50474927_original.jpg" alt="">
-															</div>
-															<div class="esg-entry-cover">
-																<div class="esg-overlay esg-zoomback eg-tavern-skin-container" data-delay="0">
-																</div>
-																<div class="esg-center eg-tavern-skin-element-1-a esg-zoomfront" data-delay="0.1">
-																	<a class="eg-tavern-skin-element-1 esgbox" href="images/Depositphotos_50474927_original.jpg">
-																		<i class="eg-icon-search"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="filterall eg-tavern-skin-wrapper">
-														<div class="esg-media-cover-wrapper">
-															<div class="esg-entry-media">
-																<img src="images/Depositphotos_51212555_original.jpg" alt="">
-															</div>
-															<div class="esg-entry-cover">
-																<div class="esg-overlay esg-zoomback eg-tavern-skin-container" data-delay="0">
-																</div>
-																<div class="esg-center eg-tavern-skin-element-1-a esg-zoomfront" data-delay="0.1">
-																	<a class="eg-tavern-skin-element-1 esgbox" href="images/Depositphotos_51212555_original.jpg">
-																		<i class="eg-icon-search"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="filterall eg-tavern-skin-wrapper">
-														<div class="esg-media-cover-wrapper">
-															<div class="esg-entry-media">
-																<img src="images/Depositphotos_4248292_original.jpg" alt="">
-															</div>
-															<div class="esg-entry-cover">
-																<div class="esg-overlay esg-zoomback eg-tavern-skin-container" data-delay="0">
-																</div>
-																<div class="esg-center eg-tavern-skin-element-1-a esg-zoomfront" data-delay="0.1">
-																	<a class="eg-tavern-skin-element-1 esgbox" href="images/Depositphotos_4248292_original.jpg">
-																		<i class="eg-icon-search"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</li>
-													<li class="filterall eg-tavern-skin-wrapper">
-														<div class="esg-media-cover-wrapper">
-															<div class="esg-entry-media">
-																<img src="images/Depositphotos_41735639_original.jpg" alt="">
-															</div>
-															<div class="esg-entry-cover">
-																<div class="esg-overlay esg-zoomback eg-tavern-skin-container" data-delay="0">
-																</div>
-																<div class="esg-center eg-tavern-skin-element-1-a esg-zoomfront" data-delay="0.1">
-																	<a class="eg-tavern-skin-element-1 esgbox" href="images/Depositphotos_41735639_original.jpg">
-																		<i class="eg-icon-search"></i>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</li>
+													{% endfor %}
 												</ul>
 											</div>
 										</article>
@@ -800,7 +205,6 @@
 							</div>
 						</div>
 					</section>
-
 					<section class="no_padding">
 						<div class="container">
 							<div class="row">
@@ -809,54 +213,8 @@
 							</div>
 						</div>
 					</section>
-
-					<section class="bg_image_10 bg_tint_light">
-						<div class="container">
-							<div class="row">
-								<div class="content_wrap">
-									<div class="columns_wrap">
-										<div class="column-1_2 sc_column_item">
-											<figure class="sc_image  sc_image_shape_square sc_image_styled">
-												<img src="images/home-2-contacts-img.jpg" alt=""/>
-											</figure>
-										</div>
-										<div class="column-1_2 sc_column_item">
-											<div class="sc_contact_form sc_contact_form_standard alignleft contact_form_1">
-												<h2 class="sc_contact_form_title">Contact Us</h2>
-											    <form class="contact_1" method="post" action="include/contact-form.php">
-											        <div class="sc_contact_form_info">
-														<div class="sc_contact_form_item sc_contact_form_field label_over">
-											                <input type="text" name="name" id="contact_form_username" placeholder="Name *">
-											            </div>
-											            <div class="sc_contact_form_item sc_contact_form_field label_over">
-											                <input type="text" name="email" id="contact_form_email" placeholder="Email *">
-											            </div>
-											        </div>
-											        <div class="message sc_contact_form_item sc_contact_form_message label_over">
-										                <textarea  id="contact_form_message" class="textAreaSize" name="message" placeholder="Message *"></textarea>
-											        </div>
-													<div class="sc_contact_form_item sc_contact_form_button">
-														<div class="squareButton sc_button_size sc_button_style_global global">
-															<button type="submit" name="contact_submit" class="contact_form_submit">CONTACT US</button>
-														</div>
-													</div>
-
-											        <div class="result sc_infobox"></div>
-											    </form>
-											</div> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
-
-
 			</div>  
-
-						{% include 'include/footer.html' %}
-
-
+			{% include 'include/footer.html' %}
 			<div class="copyright_wrap">
 				<div class="content_wrap">
 					<a href="http://themeforest.net/user/axiomthemes/portfolio">Axiom</a> © 2015 All Rights Reserved.
@@ -866,14 +224,9 @@
 			</div>
 		</div>  
 	</div>  
-
-	<a href="#" class="scroll_to_top icon-angle-up-1" title="Scroll to top"> </a>
-
 	<div class="preloader">
 	    <div class="preloader_image"></div>
 	</div>
-
-
 	<script data-cfasync="false"   src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script>
 	<script type='text/javascript' src="{% static 'js/vendor/jquery-1.11.3.min.js' %}"></script>
 	<script type='text/javascript' src="{% static 'js/vendor/jquery-migrate.min.js' %}"></script>
@@ -899,6 +252,5 @@
 	<script type='text/javascript' src="{% static 'js/vendor/swiper/idangerous.swiper.scrollbar-2.4.js' %}"></script>
 	<script type='text/javascript' src="{% static 'custom_tools/js/skin.customizer.js' %}"></script>
 	<script type='text/javascript' src="{% static 'custom_tools/js/front.customizer.js' %}"></script>
-
 </body>
 </html>
