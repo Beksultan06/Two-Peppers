@@ -1,53 +1,37 @@
 {% load static %}
-
-<header class="top_panel_wrap bg_tint_dark bg_header_1">
-				<div class="menu_main_wrap logo_left">
-					<div class="content_wrap clearfix">
-						<div class="logo">
-							<a href="{% url 'index' %}">
-								<img src="{% static 'images/logo.png' %}" class="logo_main" alt="">
-								<img src="{% static 'images/logo_fixed.png' %}" class="logo_fixed" alt="">
-								<span class="logo_slogan">Два Перца</span>
-							</a>
-						</div>
-						<a href="#" class="menu_main_responsive_button icon-menu-1">
-						</a>
-						<nav class="menu_main_nav_area">
-							<ul id="menu_main" class="menu_main_nav">
-								<li class="menu-item menu-item-has-children">
-									<a href="{% url 'index' %}">Главная</a>
-								</li>
-								<li class="menu-item">
-									<a href="{% url 'brewery' %}">О нас</a>
-								</li>
-								<li class="menu-item menu-item-has-children">
-									<a href="{% url 'events' %}">Наши Событий</a>
-								</li>
-								<li class="menu-item">
-									<a href="{% url 'reservation' %}">Наша Заведение</a>
-								</li>
-								<li class="menu-item menu-item-has-children">
-									<a href="#">Галлерия</a>
-									<ul class="sub-menu">
-										<li class="menu-item">
-											<a href="gallery-cobbles.html">Cobbles</a>
-										</li>
-										<li class="menu-item">
-											<a href="gallery-grid.html">Grid</a>
-										</li>
-										<li class="menu-item">
-											<a href="gallery-margin-grid.html">Margin Grid</a>
-										</li>
-										<li class="menu-item">
-											<a href="gallery-masonry.html">Masonry</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item current-menu-ancestor">
-									<a href="{% url 'contact' %}">Наши контакты</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>
+<header class="top_panel_wrap bg_tint_dark bg_header_1" >
+    <div class="menu_main_wrap logo_left" style="color: black;">
+        <div class="content_wrap clearfix">
+            <div class="logo">
+                <a href="{% url 'index' %}">
+                    <img src="{{ settings_id.logo.url }}" class="logo_main" alt="">
+                    <img src="{% static 'images/logo_fixed.png' %}" class="logo_fixed" alt="">
+                    <span class="logo_slogan">Два Перца</span>
+                </a>
+            </div>
+            <a href="#" class="menu_main_responsive_button icon-menu-1"></a>
+            <nav class="menu_main_nav_area">
+                <ul id="menu_main" class="menu_main_nav" style="color: black;">
+                    <li class="menu-item menu-item-has-children">
+                        <a href="{% url 'index' %}" style="color: black;">Главная</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{% url 'brewery' %}" style="color: black;">О нас</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="{% url 'events' %}" style="color: black;">Наши Событий</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="{% url 'reservation' %}" style="color: black;">Наша Заведение</a>
+                    </li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="{% url 'gallery' %}" style="color: black;">Галлерия</a>
+                    </li>
+                    <li class="menu-item current-menu-ancestor">
+                        <a href="{% url 'contact' %}" style="color: black;">Наши контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

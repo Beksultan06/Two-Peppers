@@ -7,9 +7,15 @@ from apps.base.models import ContactSettings, ContactMessage, ContactPage, Event
 About, Sheff, Testimonials, Reservation, ReservationSettings, SettingsMainPages, \
 ImageBanner, MenuCategory, Gallery
     
+
+def header(request):
+    settings_id = SettingsMainPages.objects.latest("id")
+    return render(request, 'include/header.html', locals())
+
 def events(request):
     events_id = Events.objects.latest("id")
     events_all = EventsOBJ.objects.all()
+    settings_id = SettingsMainPages.objects.latest("id")
     return render(request, "events-list.html", locals())
 
 def index(request):
@@ -34,6 +40,7 @@ def index(request):
     return  render (request, 'index2.html', locals())
     
 def contact(request):
+    settings_id = SettingsMainPages.objects.latest("id")
     obj_all = ContactSettings.objects.all()
     contact_id = ContactPage.objects.latest("id")
     if request.method == "POST":
@@ -77,12 +84,19 @@ def contact(request):
     return render(request, "contact-us.html", locals())
 
 def brewery(request):
+    settings_id = SettingsMainPages.objects.latest("id")
     about_id = About.objects.latest("id")
     sheff_all = Sheff.objects.all()
     testimonials_all = Testimonials.objects.all()
     return render(request, 'our-brewery.html', locals())
 
 def reservation(request):
+    settings_id = SettingsMainPages.objects.latest("id")
     reservation_all = Reservation.objects.all()
     reservation_id = ReservationSettings.objects.latest("id")
     return render(request, "reservation.html", locals())
+
+def gallery(request):
+    settings_id = SettingsMainPages.objects.latest("id")
+    gallery_all = Gallery.objects.all()
+    return render(request, 'gallery-grid.html', locals())
