@@ -548,7 +548,7 @@ a:hover .sc_icon.sc_icon_bg_menu,
 }
 
 .body_style_fullscreen .post_featured .post_thumb_hover {
-	background-color: rgba(93, 118, 2, 0.80);
+	background-color: #050505;
 }
 /* colors 2 */
 .booking_back_today a:hover,
